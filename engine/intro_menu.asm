@@ -72,7 +72,8 @@ NewGame: ; 5b6b
 	call ResetWRAM
 	call NewGame_ClearTileMapEtc
 	call AreYouABoyOrAreYouAGirl
-	call OakSpeech
+	call NamePlayer
+	;call OakSpeech
 	call InitializeWorld
 	ld a, 1
 	ld [wPreviousLandmark], a
@@ -1417,5 +1418,5 @@ GameInit:: ; 642e
 	ld a, $90
 	ld [hWY], a
 	call WaitBGMap
-	jp CrystalIntroSequence
+	jp NewGame
 ; 6454

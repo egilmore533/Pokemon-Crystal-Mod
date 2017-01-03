@@ -4781,10 +4781,10 @@ ChrisNameMenuHeader: ; 882b5
 	db 5 ; items
 	db "NEW NAME@"
 MalePlayerNameArray: ; 882c9
-	db "CHRIS@"
-	db "MAT@"
-	db "ALLAN@"
-	db "JON@"
+	db "ERIC@"
+	db "IS@"
+	db "DA@"
+	db "BES@"
 	db 2 ; displacement
 	db " NAME @" ; title
 
