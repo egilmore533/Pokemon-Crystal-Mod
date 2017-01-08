@@ -74,6 +74,10 @@ KrissHouseRadio:
 	pause 45
 	closetext
 	setevent EVENT_LISTENED_TO_INITIAL_RADIO
+	givepoke CHIKORITA, 5, BERRY
+	loadtrainer BUGSY, 1
+	startbattle
+	reloadmapafterbattle
 	end
 
 .NormalRadio:

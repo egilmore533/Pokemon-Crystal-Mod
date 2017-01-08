@@ -490,8 +490,7 @@ FinishContinueFunction: ; 5e5d
 	set 0, [hl]
 	res 7, [hl]
 	ld hl, wEnteredMapFromContinue
-	set 1, [hl]
-	callba OverworldLoop
+	callba OverworldLoop ; this is essentially the game loop here, without this the game never actually starts
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_RED
 	jr z, .AfterRed
