@@ -4761,7 +4761,7 @@ ShowPlayerNamingChoices: ; 88297
 	ld hl, KrisNameMenuHeader
 .GotGender:
 	call LoadMenuDataHeader
-	call VerticalMenu
+	;call VerticalMenu
 	ld a, 2
 	dec a
 	call CopyNameFromMenu
