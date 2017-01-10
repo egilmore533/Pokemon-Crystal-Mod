@@ -318,7 +318,7 @@ InitializeNPCNames: ; 5ce9
 ; 5d23
 
 InitializeWorld: ; 5d23
-	call ShrinkPlayer
+	;call ShrinkPlayer			- skip becasue skipping oak's speech means we never loaded the player pic
 	callba SpawnPlayer
 	callba _InitializeStartDay
 	ret
@@ -784,14 +784,14 @@ OakText7: ; 0x606f
 	db "@"
 
 NamePlayer: ; 0x6074
-	callba MovePlayerPicRight
+	;callba MovePlayerPicRight				- skip because skipping oak's speech means we never loaded the player pic
 	callba ShowPlayerNamingChoices
-	ld a, [wMenuCursorY]
+	ld a, 2
 	dec a
 	jr z, .NewName
 	call StorePlayerName
 	callba ApplyMonOrTrainerPals
-	callba MovePlayerPicLeft
+	;callba MovePlayerPicLeft				- skip because skipping oak's speech means we never loaded the player pic
 	ret
 
 .NewName:

@@ -4762,7 +4762,7 @@ ShowPlayerNamingChoices: ; 88297
 .GotGender:
 	call LoadMenuDataHeader
 	call VerticalMenu
-	ld a, [wMenuCursorY]
+	ld a, 2
 	dec a
 	call CopyNameFromMenu
 	call CloseWindow
