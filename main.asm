@@ -4761,7 +4761,7 @@ ShowPlayerNamingChoices: ; 88297
 	ld hl, KrisNameMenuHeader
 .GotGender:
 	call LoadMenuDataHeader
-	;call VerticalMenu
+	;call VerticalMenu		-skipping this call makes the menu never actually load and wait for input, meaning I can hard code my own and get right to it
 	ld a, 2
 	dec a
 	call CopyNameFromMenu
