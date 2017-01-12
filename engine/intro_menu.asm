@@ -321,6 +321,7 @@ InitializeWorld: ; 5d23
 	;call ShrinkPlayer			- skip becasue skipping oak's speech means we never loaded the player pic
 	callba SpawnPlayer
 	callba _InitializeStartDay
+	call CallScript
 	ret
 ; 5d33
 
@@ -901,6 +902,7 @@ ShrinkPlayer: ; 610f
 
 	call RotateThreePalettesRight
 	call ClearTileMap
+	
 	ret
 ; 616a
 

@@ -37,6 +37,7 @@ SpawnPlayer: ; 8029
 	bit 0, a
 	jr z, .ok
 	ln e, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT
+	
 
 .ok
 	ld [hl], e

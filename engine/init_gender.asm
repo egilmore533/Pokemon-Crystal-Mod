@@ -28,14 +28,14 @@ InitGender: ; 48dcb (12:4dcb)
 	call LoadGenderScreenLightBlueTile
 	call WaitBGMap2
 	call SetPalettes
-	ld hl, TextJump_AreYouABoyOrAreYouAGirl
-	call PrintText
+	;ld hl, TextJump_AreYouABoyOrAreYouAGirl 	- skip this becasue we are skipping the choice
+	;call PrintText								- skiperino
 	ld hl, .MenuDataHeader
 	call LoadMenuDataHeader
 	call WaitBGMap2
 	;call VerticalMenu
 	call CloseWindow
-	ld a, 2
+	ld a, 2										; pregreplace gender	 1 - boy 		2- girl
 	dec a
 	ld [PlayerGender], a
 	ld c, 10

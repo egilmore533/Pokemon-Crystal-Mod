@@ -1747,7 +1747,7 @@ GivePoke:: ; e277
 .party
 	callba SetCaughtData
 .set_caught_data
-	callba GiveANickname_YesNo
+	callba .skip_nickname
 	pop de
 	jr c, .skip_nickname
 	call InitNickname
@@ -1758,8 +1758,8 @@ GivePoke:: ; e277
 	ld a, b
 	and a
 	ret z
-	ld hl, TextJump_WasSentToBillsPC
-	call PrintText
+	;ld hl, TextJump_WasSentToBillsPC
+	;call PrintText
 	ld a, BANK(sBoxMonNicknames)
 	call GetSRAMBank
 	ld hl, wMonOrItemNameBuffer

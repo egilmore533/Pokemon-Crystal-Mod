@@ -4781,7 +4781,7 @@ ChrisNameMenuHeader: ; 882b5
 	db 5 ; items
 	db "NEW NAME@"
 MalePlayerNameArray: ; 882c9
-	db "ERIC@"
+	db "ERIC@"			; pregreplace boy name 
 	db "IS@"
 	db "DA@"
 	db "BES@"
@@ -4801,7 +4801,7 @@ KrisNameMenuHeader: ; 882e5
 	db 5 ; items
 	db "NEW NAME@"
 FemalePlayerNameArray: ; 882f9
-	db "KRIS@"
+	db "KRIS@"			; pregreplace girl name 
 	db "AMANDA@"
 	db "JUANA@"
 	db "JODI@"
