@@ -426,7 +426,7 @@ ButtonSound:: ; aaf
 	ld a, $1
 	ld [hBGMapMode], a
 	call DelayFrame
-	jr .input_wait_loop
+	jr .received_input
 
 .received_input
 	pop af
