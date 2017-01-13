@@ -3660,10 +3660,10 @@ OfferSwitch: ; 3d74b
 	push af
 	callab Battle_GetTrainerName
 	ld hl, BattleText_EnemyIsAboutToUseWillPlayerChangePkmn
-	call StdBattleTextBox
+	;call StdBattleTextBox
 	lb bc, 1, 7
-	call PlaceYesNoBox
-	ld a, [wMenuCursorY]
+	;call PlaceYesNoBox
+	ld a, 2
 	dec a
 	jr nz, .said_no
 	call SetUpBattlePartyMenu_NoLoop
@@ -5680,7 +5680,7 @@ MoveSelectionScreen: ; 3e4bc
 	ld bc, SCREEN_WIDTH
 	dec a
 	call AddNTimes
-	ld [hl], "▷"
+	ld [hl], "$"
 
 .interpret_joypad
 	ld a, $1
