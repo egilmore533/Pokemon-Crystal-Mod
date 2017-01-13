@@ -80,7 +80,7 @@ KrissHouseRadio:
 	givepoke FARFETCH_D, 5			; pokemon 3 
 	givepoke SCYTHER, 5				; pokemon 4 
 	givepoke GYARADOS, 5			; pokemon 5 
-	givepoke GENGAR, 5				; pokemon 6
+	givepoke GENGAR, 15				; pokemon 6
 	loadtrainer BUGSY, 1
 	startbattle
 	reloadmapafterbattle

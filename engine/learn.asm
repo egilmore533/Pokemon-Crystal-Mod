@@ -102,9 +102,11 @@ LearnMove: ; 6508
 	jp .learned
 
 .cancel
-	ld hl, Text_StopLearning ; Stop learning <MOVE>?
-	call PrintText
-	call YesNoBox
+	ld b, 0
+	ret
+	;ld hl, Text_StopLearning ; Stop learning <MOVE>?
+	;call PrintText
+	;call YesNoBox
 	jp c, .loop
 
 	ld hl, Text_DidNotLearn ; <MON> did not learn <MOVE>.
@@ -122,9 +124,12 @@ LearnMove: ; 6508
 ForgetMove: ; 65d3
 	push hl
 	ld hl, Text_TryingToLearn
-	call PrintText
-	call YesNoBox
+	;call PrintText
+	;call YesNoBox
 	pop hl
+	ld a, 2 
+	dec a
+	jp nz, .cancel
 	ret c
 	ld bc, -NUM_MOVES
 	add hl, bc
